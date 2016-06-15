@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: sis.tv.controller.FootballControllerTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.947 sec - in sis.tv.controller.FootballControllerTests

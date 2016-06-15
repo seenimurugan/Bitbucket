@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration debug="true" scan="true" scanPeriod="60 seconds">
+    
+<!--    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />-->
+    <property resource="appConfig/application.properties" />
+    
+    <if condition='property("env.name").equalsIgnoreCase("LOCAL")'>
+        <then>
+            <include resource="logbackConfig/logback-localServer.xml"/>
+        </then>  
+    </if>
+    <if condition='property("env.name").equalsIgnoreCase("PRODUCTION")'>
+        <then>
+            <include resource="logbackConfig/logback-productionServer.xml"/>
+        </then>  
+    </if>
+    
+</configuration>
